@@ -155,13 +155,13 @@ aharrayworkdensity_s = np.zeros((3,17))
 aharrayworkdensity_n = np.zeros((3,17))
 
 case1 = ['P1' , 'P2', 'P3']
-
+#output directory
 directory = "./aha/without_disarray_new_1/"
 
 for l in range(len(case1)):
-				
+	#input directory			
 	dir1 = './with_dispersion/'+ case1[l]+"/new/k0/simulation_1/mechanics/ME/"
-	#dir1 = './with_dispersion/P3/new/k0/simulation_1/mechanics/ME/'
+
 	
 	AHA_strain = aha_strain(directory1 = dir1, case3 = 'min', Case1 = case1[l])
 	AHA_stress = aha_stress(directory1 = dir1, case3 = 'max', Case1 = case1[l])
