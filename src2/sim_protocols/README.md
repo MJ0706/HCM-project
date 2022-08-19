@@ -55,7 +55,7 @@ Simulation parameters are:
 - `abs_tol`: Absolute tolerance for newton iteration
 - `rel_tol`: Relative tolerance for newton iteration
 
-#### `HolzapfelOgdenParams`
+#### `GuccioneParams`
 - `Passive model`: Name of the passive model given in python dictionary `{Name: "<model name>"}`. The model implemented so far include Guccione (`Guccione`) and Holzapfel-Odgen (`HolzapfelOdgen`).
 - `Passive params`: Parameters of the passive model given in python dictionary.
 - `Active model`: Name of the active model given in python dictionary `{Name: "<model name>"}`. The model implemented so far include Guccione (`GuccioneAct`) and Time-varying (`Time-varying`).
