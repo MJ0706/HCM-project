@@ -57,6 +57,7 @@ Demo python scripts are also provided to simulate
   - Error bar plot will be plotted by [plot_data_error.py](./main/plot_data_error.py)
   - Deformation can be extracted using [extract_deformation.py](./main/extract_deformation.py)
   - AHA plot can be outlined by [ahaplot.py](./main/ahaplot.py)
+  - AHA plot with disarray can be outlined by [ahaplot_with_disarray.py](./main/ahaplot_with_disarray.py)
   - If you face any issues running with code, email (mojumder@msu.edu) 
 
 
