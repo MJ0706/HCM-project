@@ -48,7 +48,7 @@ Demo python scripts are also provided to simulate
   - [Patient_3](./ed_mesh_create/Patient_3/createLV_refine.py)
 - Create Hdf5 file to run simuations using [create_baselinegeo_animal.py](./ed_mesh_create/create_baselinegeo_animal.py)
   - make sure the directory is correct for specific patient at [create_baselinegeo_animal.py](./ed_mesh_create/create_baselinegeo_animal.py)
-- [closed loop simulation of LV](./main/Control_HCM_main.py)
+- Simulation protocol & post-processing
   - Detail of the code is explained in [Control_HCM_main.py](./main/Control_HCM_main.py)
   - Postprocessing of the code is explained last 4 lines in [Control_HCM_main.py](./main/Control_HCM_main.py)
   - Klotz plot will be plotted using [fitEDPVR_1.py](./main/fitEDPVR_1.py)
