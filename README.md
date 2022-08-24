@@ -24,7 +24,7 @@ sudo singularity build <container_name>.img Singularity_fenics2017_msucompbiomec
  singularity run <container_name>.img
 ```
 
-4. The code can be run within the singularity container. For example, for the code [createLV_refine](./ed_mesh_create/createLV_refine.py)  
+4. The code can be run within the singularity container. For example, for the code [createLV_refine](./ed_mesh_create/Patient_1/createLV_refine.py)  
 ```
 python createLV_refine.py
 ```
@@ -43,7 +43,14 @@ The code is organized as follows:
 
 Demo python scripts are also provided to simulate
 - [closed loop simulation of LV](./main/Control_HCM_main.py)
-  - Detail of the code is explained in [code](./main/Control_HCM_main.py)
+  - Detail of the code is explained in [Control_HCM_main.py](./main/Control_HCM_main.py)
+  - Postprocessing of the code is explained last 4 lines in [Control_HCM_main.py](./main/Control_HCM_main.py)
+  - Klotz plot will be plotted using [fitEDPVR_1.py](./main/fitEDPVR_1.py)
+  - PV plot for without disarray case will be outlined using [ plot_data_withoutdis.py](./main/ plot_data_withoutdis.py)
+  - PV plot will be outlined using [plot_data_P2.py](./main/plot_data_P2.py)
+  - Error bar plot will be plotted by [plot_data_error.py](./main/plot_data_error.py)
+  - Deformation can be extracted using [extract_deformation.py](./main/extract_deformation.py)
+  - AHA plot can be outlined by [ahaplot.py](./main/ahaplot.py)
   - If you face any issues running with code, email (mojumder@msu.edu) 
 
 
