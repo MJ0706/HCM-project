@@ -12,8 +12,8 @@ from finalcode.extract_work import ExtractWork as ExtractWork
 #  - - - - - - - - - - - -- - - - - - - - - - - - - - - -- - - - - - - 
 
 IODetails = {"casename" : "case_P1", #Change casename for specific patient
-             "directory_me" : './fine3/', #check the folder location is correct
-             "directory_ep" : './fine3/', 
+             "directory_me" : './../fine3/', #check the folder location is correct
+             "directory_ep" : './../fine3/', 
              "outputfolder" : './with_dispersion/P1/new/github/k0/simulation_1/', #check output folder 
              "folderName" : '',
              "caseID" : 'LVelectromechanics',
