@@ -42,6 +42,12 @@ The code is organized as follows:
 - [postprocessing](./src2/postprocessing)
 
 Demo python scripts are also provided to simulate
+- Create end diastole mesh file 
+  - [Patient_1](./ed_mesh_create/Patient_1/createLV_refine.py)
+  - [Patient_2](./ed_mesh_create/Patient_2/createLV_refine.py)
+  - [Patient_3](./ed_mesh_create/Patient_3/createLV_refine.py)
+- Create Hdf5 file to run simuations using [create_baselinegeo_animal.py](./ed_mesh_create/create_baselinegeo_animal.py)
+  - make sure the directory is correct for specific patient at [create_baselinegeo_animal.py](./ed_mesh_create/create_baselinegeo_animal.py)
 - [closed loop simulation of LV](./main/Control_HCM_main.py)
   - Detail of the code is explained in [Control_HCM_main.py](./main/Control_HCM_main.py)
   - Postprocessing of the code is explained last 4 lines in [Control_HCM_main.py](./main/Control_HCM_main.py)
