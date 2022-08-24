@@ -44,6 +44,7 @@ The code is organized as follows:
 Demo python scripts are also provided to simulate
 - [closed loop simulation of LV](./main/Control_HCM_main.py)
   - Detail of the code is explained in [code](./main/Control_HCM_main.py)
+  - If you face any issues running with code, email (mojumder@msu.edu) 
 
 
 
