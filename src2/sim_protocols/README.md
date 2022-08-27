@@ -20,7 +20,7 @@ This protocol simulates the coupling between cardiac  electromechanics (Biventri
 
 ![Closed Loop Circulatory - Biventricular model](../../figures/BiVClosedLoopModel.png)
 
-The calling function is [`run_BiV_ClosedLoop.py`](../src/sim_protocols/run_BiV_ClosedLoop.py) that takes in the input parameters `IODet` consisting of I/O parameters and `SimDet` consisting of simulation parameters. Parameters are input as python dictionary in `IODet` and `SimDet`.
+The calling function is [`run_BiV_ClosedLoop.py`](../src2/sim_protocols/run_BiV_ClosedLoop.py) that takes in the input parameters `IODet` consisting of I/O parameters and `SimDet` consisting of simulation parameters. Parameters are input as python dictionary in `IODet` and `SimDet`.
 
 I/O parameters are:
 - `casename`: case name associated with the HDF5 mesh files for mechanics and electrophysiology.
@@ -55,7 +55,7 @@ Simulation parameters are:
 - `abs_tol`: Absolute tolerance for newton iteration
 - `rel_tol`: Relative tolerance for newton iteration
 
-#### `GiccioneParams`
+#### `GuccioneParams`
 - `Passive model`: Name of the passive model given in python dictionary `{Name: "<model name>"}`. The model implemented so far include Guccione (`Guccione`) and Holzapfel-Odgen (`HolzapfelOdgen`).
 - `Passive params`: Parameters of the passive model given in python dictionary.
 - `Active model`: Name of the active model given in python dictionary `{Name: "<model name>"}`. The model implemented so far include Guccione (`GuccioneAct`) and Time-varying (`Time-varying`).
@@ -121,7 +121,7 @@ The demo files in [`BiVelectromechanics.py`](../../demo/BiVelectromechanics.py) 
 
 This protocol simulates passive uniaxial stretch of a strip of cardiac tissue using the user prescribed  constitutive model.
 
-The calling function is [`run_uniaxial_stretch.py`](../src/sim_protocols/run_uniaxial_stretch.py) that takes in the input parameters `IODet` consisting of I/O parameters and `SimDet` consisting of simulation parameters. Parameters are input as python dictionary in `IODet` and `SimDet`.
+The calling function is [`run_uniaxial_stretch.py`](../src2/sim_protocols/run_uniaxial_stretch.py) that takes in the input parameters `IODet` consisting of I/O parameters and `SimDet` consisting of simulation parameters. Parameters are input as python dictionary in `IODet` and `SimDet`.
 
 I/O parameters are:
 - `outputfolder`: user prescribed output directory for the simulation
@@ -149,7 +149,7 @@ The demo file in [`uniaxial_passive_stretch.py`](../../demo/uniaxial_passive_str
 
 This protocol simulates isometric tension test of a strip of cardiac tissue.
 
-The calling function is [`run_isometric.py`](../src/sim_protocols/run_isometric.py) that takes in the input parameters `IODet` consisting of I/O parameters and `SimDet` consisting of simulation parameters. Parameters are input as python dictionary in `IODet` and `SimDet`.
+The calling function is [`run_isometric.py`](../src2/sim_protocols/run_isometric.py) that takes in the input parameters `IODet` consisting of I/O parameters and `SimDet` consisting of simulation parameters. Parameters are input as python dictionary in `IODet` and `SimDet`.
 
 I/O parameters are:
 - `outputfolder`: user prescribed output directory for the simulation
@@ -181,7 +181,7 @@ The demo file in [`isometric_test.py`](../../demo/isometric_test.py) apply this 
 
 This protocol simulates isotonic tension test of a strip of cardiac tissue given a user prescribed load at one end.
 
-The calling function is [`run_isotonic.py`](../src/sim_protocols/run_isotonic.py) that takes in the input parameters `IODet` consisting of I/O parameters and `SimDet` consisting of simulation parameters. Parameters are input as python dictionary in `IODet` and `SimDet`.
+The calling function is [`run_isotonic.py`](../src2/sim_protocols/run_isotonic.py) that takes in the input parameters `IODet` consisting of I/O parameters and `SimDet` consisting of simulation parameters. Parameters are input as python dictionary in `IODet` and `SimDet`.
 
 I/O parameters are:
 - `outputfolder`: user prescribed output directory for the simulation
