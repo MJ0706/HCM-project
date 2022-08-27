@@ -32,7 +32,7 @@ python createLV_refine.py
 ```
 or in parallel
 ```
-mpirun.mpich -np <# processors> createLV_refine.py
+mpirun.mpich -np <# processors> python createLV_refine.py
 ```
 
 ### Organization of the code
