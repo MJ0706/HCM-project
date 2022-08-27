@@ -1,6 +1,6 @@
 # Hypertrophic cardiomyopathy project
 
-### The mathematical details, data, simulation protols and results are explained in the manuscript. If you have access to the manuscript, please, follow it first.
+### The mathematical details, data, simulation protocols and results are explained in the manuscript. If you have access to the manuscript, please, follow it first. 
 
 Simulator of mechanics in the heart based on [FEniCS](https://fenicsproject.org/) library.
 
