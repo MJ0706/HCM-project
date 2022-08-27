@@ -55,7 +55,7 @@ Demo python scripts are also provided to simulate
     - Control patient [1.Control.py](./main/1.Control.py)
     - Nonobstructive HCM patient [2. Nonobstructive_main.py](./main/2.Nonobstructive_main.py)
     - Obstructive HCM patient [3. Obstructive_main.py](./main/3.Obstructive_main.py)
-    - To simulate the cases with dispersion for both non-obstructive and obstructive HCM patient,  read the instructions within the codes [2. Nonobstructive_main.py](./main/2.Nonobstructive_main.py) and [3. Obstructive_main.py](./main/3.Obstructive_main.py), respectfull, with care. 
+    - To simulate the cases with dispersion for both non-obstructive and obstructive HCM patient,  read the instructions within the codes [2. Nonobstructive_main.py](./main/2.Nonobstructive_main.py) and [3. Obstructive_main.py](./main/3.Obstructive_main.py), respectfully, with care. 
   - Postprocessing of the code is explained at last 4 lines (that are commented) in codes such as [1. Control.py](./main/1.Control.py), [2. Nonobstructive_main.py](./main/2.Nonobstructive_main.py), [3. Obstructive_main.py](./main/3.Obstructive_main.py)
   - Klotz plot will be plotted using [4. KlotzPlot.py](/main/4.KlotzPlot.py)
   - PV plot for without disarray case will be outlined using [ 5. plot_data_WithoutDisarray.py](./main/5.plot_data_WithoutDisarray.py). Make sure the input directory is correct while running this code. 
