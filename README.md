@@ -43,9 +43,9 @@ The code is organized as follows:
 
 Demo python scripts are also provided to simulate
 - Create end diastole mesh file 
-  - [Patient_1](./ed_mesh_create/Patient_1/createLV_refine.py)
-  - [Patient_2](./ed_mesh_create/Patient_2/createLV_refine.py)
-  - [Patient_3](./ed_mesh_create/Patinet_3/createLV_refine.py)
+  - [Patient_1](./ed_mesh_create/Patient_1/createLV_refine.py) : Contro Patient
+  - [Patient_2](./ed_mesh_create/Patient_2/createLV_refine.py) : Non-obstructive HCM patinet
+  - [Patient_3](./ed_mesh_create/Patinet_3/createLV_refine.py) : Obstructive HCM patient
 - Create Hdf5 file to run simuations using [create_baselinegeo_animal.py](./ed_mesh_create/create_baselinegeo_animal.py)
   - make sure the directory is correct for specific patient at [create_baselinegeo_animal.py](./ed_mesh_create/create_baselinegeo_animal.py)
 - Simulation protocol & post-processing
