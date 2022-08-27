@@ -52,7 +52,7 @@ Demo python scripts are also provided to simulate
   - make sure the directory is correct for specific patient at [create_baselinegeo_animal.py](./ed_mesh_create/create_baselinegeo_animal.py)
 - Simulation protocol & post-processing
   - Detail of the code is explained in patient specific code. 
-    - Control patient [1. Control.py](./main/1. Control.py)
+    - Control patient [1.Control.py](./main/1. Control.py)
     - Nonobstructive HCM patient [2. Nonobstructive_main.py](./main/2. Nonobstructive_main.py)
     - Obstructive HCM patient [3. Obstructive_main.py](./main/3. Obstructive_main.py)
     - For cases with dispersion fro both non-obstructive and obstructive HCM patient,  read the instructions within the codes [2. Nonobstructive_main.py](./main/2. Nonobstructive_main.py) and [3. Obstructive_main.py](./main/3. Obstructive_main.py), respectfull, with care. 
