@@ -56,7 +56,6 @@ def GetEDPVR(Pm, Vm, Varray):
 
     V0 = GetUnloadedV(Pm, Vm)
     Parray = [alpha*V**beta  for V in Varray]
-    #Varray = [np.exp(np.log(P/alpha)/beta)for P in Parray]
     return Parray
 
 
@@ -82,10 +81,9 @@ def GetUnloadedEDPVR(unloadfilename):
     ind = np.array(unloadPV[:,0])
     LVP = np.array(unloadPV[:,1])
     LVV = np.array(unloadPV[:,2])
-    #print "max ind : ", np.max(ind)
     
-    LVP_final = [LVP[k] for k in np.where(ind == int(np.max(ind)))[0]]
-    LVV_final = [LVV[k] for k in np.where(ind == int(np.max(ind)))[0]]
+    LVP_final = [LVP[k] for k in np.where(ind == int(np.min(ind)))[0]]
+    LVV_final = [LVV[k] for k in np.where(ind == int(np.min(ind)))[0]]
 
     return LVP_final, LVV_final
 
@@ -117,15 +115,15 @@ P3_Varray = np.linspace(V03,Vm3)
 P3_Parray = GetEDPVR(Pm3, Vm3, P3_Varray)
 
 
-directory1 = './with_dispersion/simulation/P1/k0/simulation_7/edpvr/'
+directory1 = './with_dispersion/P1/k0/simulation/LVelectromechanics/'
 unloadfilename = directory1+"BiV_PV.txt"
 LVP1, LVV1 = GetUnloadedEDPVR(unloadfilename)
 
-directory2 = './with_dispersion/simulation/P2/k0/simulation_7/edpvr/'
+directory2 = './with_dispersion/P2/k0/simulation/LVelectromechanics/'
 unloadfilename = directory2+"BiV_PV.txt"
 LVP2, LVV2 = GetUnloadedEDPVR(unloadfilename)
 
-directory3 = './with_dispersion/simulation/P3/k0/simulation_15/evpvr/'
+directory3 = './with_dispersion/P3/k0/simulation/LVelectromechanics/'
 unloadfilename = directory3+"BiV_PV.txt"
 LVP3, LVV3 = GetUnloadedEDPVR(unloadfilename)
 
@@ -141,7 +139,7 @@ plt.plot(P1_Varray, P1_Parray,'o', label="Ktotz_Control", color ='k', alpha = 0.
 plt.plot(P2_Varray, P2_Parray, 'o', label="Ktotz_Non Obstructive", color ='b', alpha = 0.4)
 plt.plot(P3_Varray, P3_Parray, 'o', label="Ktotz_Obstructive", color ='r', alpha = 0.4)
 
-csfont = {'fontname':'Times New Roman', 'fontsize':'16'} #  ,'fontweight':"bold",
+csfont = {'fontname':'Times New Roman', 'fontsize':'16'} 
 plt.plot(LVV1, LVP1,  label = label1, color ='k')
 plt.plot(LVV2, LVP2,  label = label2, color = 'b')
 plt.plot(LVV3, LVP3,  label = label3, color = 'r')
@@ -152,7 +150,6 @@ plt.ylabel("Pressure (mmHg)", fontsize = 16)
 plt.title("Passive EDPVR", fontsize = 20)
 plt.legend()
 plt.tight_layout()
-#plt.savefig("./Patient_1_simulation_EDPVR/Klotz_fitting_dispersion_p1_kspring.png")
 plt.savefig("Patient_Klotz.png")
 plt.show()
 
