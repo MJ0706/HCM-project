@@ -25,9 +25,9 @@ outdir = './Simulation_without_disarray/'
 os.mkdir(outdir)
 casenames  = [
 
-	      './with_dispersion/P1/new/k0/simulation_1/LVelectromechanics/LVelectromechanics',\
-	      './with_dispersion/P2/new/k0/simulation_1/LVelectromechanics/LVelectromechanics',\
-	      './with_dispersion/P3/new/k0/simulation_1/LVelectromechanics/LVelectromechanics',\
+	      './with_dispersion/P1/k0/simulation/LVelectromechanics/LVelectromechanics',\
+	      './with_dispersion/P2/k0/simulation/LVelectromechanics/LVelectromechanics',\
+	      './with_dispersion/P3/k0/simulation/LVelectromechanics/LVelectromechanics',\
 
 
 	     ]

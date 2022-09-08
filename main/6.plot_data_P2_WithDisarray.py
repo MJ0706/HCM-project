@@ -21,15 +21,15 @@ BCLs = [
 	910,\
        ]
 cycle = 10
-outdir = './with_disarray_nonobs_new_01_2/'
+outdir = './with_disarray_nonobs/'
 os.mkdir(outdir)
 casenames  = [
 
-	      './with_dispersion/P2/new/k0/simulation_01/LVelectromechanics/LVelectromechanics',\
-	      './with_dispersion/P2/new/k1/simulation_01/LVelectromechanics/LVelectromechanics',\
-	      './with_dispersion/P2/new/k2/simulation_01/LVelectromechanics/LVelectromechanics',\
-	      './with_dispersion/P2/new/k3/simulation_01/LVelectromechanics/LVelectromechanics',\
-	      './with_dispersion/P2/new/k4/simulation_01/LVelectromechanics/LVelectromechanics',\
+	      './with_dispersion/P2/k0/simulation/LVelectromechanics/LVelectromechanics',\
+	      './with_dispersion/P2/k1/simulation/LVelectromechanics/LVelectromechanics',\
+	      './with_dispersion/P2/k2/simulation/LVelectromechanics/LVelectromechanics',\
+	      './with_dispersion/P2/k3/simulation/LVelectromechanics/LVelectromechanics',\
+	      './with_dispersion/P2/k4/simulation/LVelectromechanics/LVelectromechanics',\
 
 	     ]
 
@@ -40,8 +40,7 @@ labels  = [
 	      r'$\kappa$=0.14',\
 	      r'$\kappa$=0.18',\
 	      r'$\kappa$=0.22',\
-	      #'ef= 80',\
-	      #'ef= 85 endo,-75 epi',\
+
 	     ]
 
 colors=["k",

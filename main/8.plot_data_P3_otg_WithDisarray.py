@@ -22,38 +22,26 @@ BCLs = [
 	1180,\
        ]
 cycle = 10
-outdir = './simulation_plot/P3_OTG_25/'
+outdir = './simulation_plot/obstructive_OTG/'
 os.mkdir(outdir)
 casenames  = [
-	      './with_dispersion/P3/new/k0/simulation_1/LVelectromechanics/LVelectromechanics',\
-	      './with_dispersion/P3/new/k1/simulation_1/LVelectromechanics/LVelectromechanics',\
-	      './with_dispersion/P3/new/k2/simulation_1/LVelectromechanics/LVelectromechanics',\
-	      './with_dispersion/P3/new/k3/simulation_1/LVelectromechanics/LVelectromechanics',\
-	      './with_dispersion/P3/new/k4/simulation_1/LVelectromechanics/LVelectromechanics',\
-	      './with_dispersion/P3/new/k5/simulation_1/LVelectromechanics/LVelectromechanics',\
+	      './with_dispersion/P3/k0/simulation/LVelectromechanics/LVelectromechanics',\
+	      './with_dispersion/P3/k1/simulation/LVelectromechanics/LVelectromechanics',\
+	      './with_dispersion/P3/k2/simulation/LVelectromechanics/LVelectromechanics',\
+	      './with_dispersion/P3/k3/simulation/LVelectromechanics/LVelectromechanics',\
+	      './with_dispersion/P3/k4/simulation/LVelectromechanics/LVelectromechanics',\
+	      './with_dispersion/P3/k5/simulation/LVelectromechanics/LVelectromechanics',\
 
 	     ]
-'''
+
 labels  = [
-	      'k= 0',\
-	      'k=0.07',\
-	      'k=0.1',\
-	      'k=0.14',\
-	      'k=0.18',\
-	      'k=0.22',\
-	      #'ef= 80',\
-	      #'ef= 85 endo,-75 epi',\
-	     ]
-'''
-labels  = [
-	      'w\o otg',\
-	      'w otg',\
-	      'otg_23',\
-	      'otg_2',\
-	      'k3',\
-	      'k4',\
-	      #'ef= 80',\
-	      #'ef= 85 endo,-75 epi',\
+	      r'$\kappa$=0',\
+	      r'$\kappa$=0.07',\
+	      r'$\kappa$=0.1',\
+	      r'$\kappa$=0.14',\
+	      r'$\kappa$=0.18',\
+	      r'$\kappa$=0.22',\
+
 	     ]
 
 colors=["k",
