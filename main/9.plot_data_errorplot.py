@@ -58,7 +58,7 @@ def GetEDPVR(Pm, Vm, Varray):
 
     V0 = GetUnloadedV(Pm, Vm)
     Parray = [alpha*V**beta  for V in Varray]
-    #Varray = [np.exp(np.log(P/alpha)/beta)for P in Parray]
+
     return Parray
 
 
@@ -84,10 +84,10 @@ def GetUnloadedEDPVR(unloadfilename):
     ind = np.array(unloadPV[:,0])
     LVP = np.array(unloadPV[:,1])
     LVV = np.array(unloadPV[:,2])
-    #print "max ind : ", np.max(ind)
+
     
-    LVP_final = [LVP[k] for k in np.where(ind == int(np.max(ind)))[0]]
-    LVV_final = [LVV[k] for k in np.where(ind == int(np.max(ind)))[0]]
+    LVP_final = [LVP[k] for k in np.where(ind == int(np.min(ind)))[0]]
+    LVV_final = [LVV[k] for k in np.where(ind == int(np.min(ind)))[0]]
 
     return LVP_final, LVV_final
 
@@ -105,13 +105,13 @@ BCLs = [
        	1180,\
        ]
 cycle = 10
-outdir = './Simulation_without_disarray_nan/'
+outdir = './Simulation_without_disarray/'
 #os.mkdir(outdir)
 casenames  = [
 
-	      './with_dispersion/P1/new/k0/simulation_1/LVelectromechanics/LVelectromechanics',\
-	      './with_dispersion/P2/new/k0/simulation_1/LVelectromechanics/LVelectromechanics',\
-	      './with_dispersion/P3/OTG/k0/simulation_3/LVelectromechanics/LVelectromechanics',\
+	      './with_dispersion/P1/k0/simulation/LVelectromechanics/LVelectromechanics',\
+	      './with_dispersion/P2/k0/simulation/LVelectromechanics/LVelectromechanics',\
+	      './with_dispersion/P3/k0/simulation/LVelectromechanics/LVelectromechanics',\
 
 	     ]
 
@@ -144,8 +144,7 @@ WDdistfilename = outdir +"compareWDdist.png"
 RelQdisfilename = outdir +"comparerelQdist.png"
 
 caseno = 0
-MV_area = 2.5 # Assuming MV_area = 4cm^2 and Vmax = Q/(A/2) based on poiseulle
-#Qtotal_arr = []
+MV_area = 2.5 
 isexpt = True
 filenames = [
 	     "./clinicaldata/Patient_1_data.txt",\
@@ -250,39 +249,16 @@ for (casename, label, color, filename) in zip(casenames, labels, colors, filenam
 		LVV_expt_sq  += np.square(LVV_expt[i])
 		LVP_expt_sq  += np.square(LVP_expt[i])
 
-	#LVV_MSE = np.square(np.subtract(LVV_expt,LVV)/LVV_expt).mean()
-	#LVP_MSE = np.square(np.subtract(LVP_expt,LVP)/LVP_expt).mean()
-
-	#LVV_dev = np.sqrt(np.square(np.subtract(LVV_expt,LVV)).mean())
-	#LVP_dev = np.sqrt(np.square(np.subtract(LVP_expt,LVP)).mean())
-
-	#LVV_dev = np.subtract(LVV_expt,LVV)
-	#LVP_dev = np.subtract(LVP_expt,LVP)
-	#ax[cnt][0].violinplot
-	#print LVV_dev, LVP_dev
-	
-	#LVV_RMSE = np.sqrt(LVV_MSE)
-	#LVP_RMSE = np.sqrt(LVP_MSE)
-	#print LVV_MSE, LVV_RMSE, LVP_MSE, LVP_RMSE
 
 	LVV_mean_error = LVV_error_sq/LVV_expt_sq
 	LVP_mean_error = LVP_error_sq/LVP_expt_sq
 	
-	#MSE_V.append(LVV_MSE)
+
 	RMSE_V.append(LVV_mean_error)
-	#MSE_P.append(LVP_MSE)
+
 	RMSE_P.append(LVP_mean_error)
 
-	'''LVV_E = np.subtract(LVV_expt,LVV)/LVV_expt
-	LVP_E = np.subtract(LVP_expt,LVP)/LVP_expt
 
-	if cnt ==0:
-		LVV_Error = LVV_E 
-		LVP_Error = LVP_E
-		cnt += 1
-	else:
-		LVV_Error = np.concatenate([LVV_Error, LVV_E])	
-		LVP_Error = np.concatenate([LVP_Error, LVP_E])	'''
 	del tpt_array[:]
 	del LVV_array[:]
 	del LVP_array[:]
@@ -298,8 +274,7 @@ for (casename, label, color, filename) in zip(casenames, labels, colors, filenam
 
 print DBP_model
 print SBP_model
-#print LVV_Error
-#print LVP_Error
+
 
 
 print Ell_model
@@ -320,15 +295,15 @@ print DBP_Error, SBP_Error, Ell_Error
 
 
 
-directory1 = './with_dispersion//P1/new/edpvr/'
+directory1 = './with_dispersion/P1/k0/simulation/LVelectromechanics/'
 unloadfilename = directory1+"BiV_PV.txt"
 LVP1, LVV1 = GetUnloadedEDPVR(unloadfilename)
 
-directory2 = './with_dispersion/P2/new/edpvr/'
+directory2 = './with_dispersion/P2/k0/simulation/LVelectromechanics/'
 unloadfilename = directory2+"BiV_PV.txt"
 LVP2, LVV2 = GetUnloadedEDPVR(unloadfilename)
 
-directory3 = './with_dispersion/P3/OTG/evpvr/'
+directory3 = './with_dispersion/P3/k0/simulation/LVelectromechanics/'
 unloadfilename = directory3+"BiV_PV.txt"
 LVP3, LVV3 = GetUnloadedEDPVR(unloadfilename)
 
@@ -373,7 +348,7 @@ x_pos = np.arange(len(labels))
 CTEs = [np.linalg.norm(edpvr_err)*100, np.linalg.norm(RMSE_V)*100, np.linalg.norm(Ell_Error)*100, np.linalg.norm(AO_Error)*100]
 error = [np.std(edpvr_err)*100, np.std(RMSE_V)*100, np.std(Ell_Error)*100, np.std(AO_Error)*100]
 
-csfont = {'fontname':'Times New Roman',  'fontsize':'12'} #'fontweight':"bold",
+csfont = {'fontname':'Times New Roman',  'fontsize':'12'} 
 fig, ax = plt.subplots()
 ax.bar(x_pos, CTEs, yerr=error, align='center', alpha=0.5, ecolor='black', capsize=10)
 ax.set_ylabel('Error (%)', fontsize = 16)
