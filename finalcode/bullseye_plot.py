@@ -269,3 +269,64 @@ def LVbullseyemulti6(data, filename, Stimulus, DirectorY, maxm, minm):
 	#plt.show()
 
 	plt.close()
+
+
+def LVbullseyemulti5(data, filename, Stimulus, DirectorY, maxm, minm):
+
+
+	plt.rcParams["font.family"] = "times new roman"
+	plt.rcParams.update({'font.size': 14})
+	plt.rcParams.update({'font.weight': 'bold'})
+	#data = data/abs(np.median(data))
+	min1 = minm #np.min(data)
+	max1 = maxm #np.max(data)
+
+	m2 = tick_mat2(min1, max1)
+
+	# Make a figure and axes with dimensions as desired.
+	fig, ax = plt.subplots(figsize=(12, 8), nrows=2, ncols=3,
+                       subplot_kw=dict(projection='polar'))
+	fig.canvas.set_window_title(Stimulus)
+
+	# Create the axis for the colorbars
+
+
+	axl4 = fig.add_axes([0.12, 0.05, 0.78, 0.05])
+
+	# Set the colormap and norm to correspond to the data for which
+	# the colorbar will be used.
+
+	cmap = mpl.cm.viridis # mpl.cm.plasma#mpl.cm.cool#mpl.cm.inferno# #
+	norm2 = mpl.colors.Normalize(vmin=round(np.amin(min1),3), vmax=round(np.amax(max1),3))
+
+	cb3 = mpl.colorbar.ColorbarBase(axl4, cmap=cmap, norm=norm2, ticks = m2, orientation='horizontal')
+	cb3.ax.tick_params(labelsize=20)
+		
+
+	bullseye_plot(ax[0][0], data[0][:], cmap=cmap, norm=norm2)
+	ax[0][0].set_title(r'$\kappa $ = 0', fontweight = 'bold')
+	#ax[0][0].set_title('m = 0', fontweight = 'bold')
+
+	bullseye_plot(ax[0][1], data[1][:], cmap=cmap, norm=norm2)
+	ax[0][1].set_title(r'$\kappa $ = 0.07', fontweight = 'bold')
+	#ax[0][1].set_title('m = 1', fontweight = 'bold')
+
+
+	bullseye_plot(ax[0][2], data[2][:], cmap=cmap, norm=norm2)
+	ax[0][2].set_title(r'$\kappa $= 0.1', fontweight = 'bold')
+	#ax[0][2].set_title('m = 2', fontweight = 'bold')
+
+	bullseye_plot(ax[1][0], data[3][:], cmap=cmap, norm=norm2)
+	ax[1][0].set_title(r'$\kappa $ = 0.14', fontweight = 'bold')
+
+
+	bullseye_plot(ax[1][1], data[4][:], cmap=cmap, norm=norm2)
+	ax[1][1].set_title(r'$\kappa $= 0.18', fontweight = 'bold')
+
+
+
+	plt.savefig(DirectorY+ filename +'_1.png')
+
+	#plt.show()
+
+	plt.close()

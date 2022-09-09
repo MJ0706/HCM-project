@@ -6,7 +6,7 @@ import os
 from dolfin import *
 import pdb
 import vtk.util.numpy_support as vtk_support
-sys.path.append("/home/lclee/Research/HCM")
+sys.path.append("/mnt/home/mojumder/HPCC_HCM/github/HCM")
 import vtk_py as vtk_py
 import numpy as np
 import math
@@ -158,12 +158,13 @@ aharrayworkdensity_f = np.zeros((n,17))
 aharrayworkdensity_s = np.zeros((n,17))
 aharrayworkdensity_n = np.zeros((n,17))
 
-directory = "./aha/with_disarray_new/P2/new/"
+directory = "./aha_with_disarray_obstructive/"
+os.mkdir(directory)
 
 for l in range(len(case1)):
 				
 	#Change the directory for each HCM patients for different dispersion	
-	dir1 = './with_dispersion/P2/new/'+ case1[l]+"/simulation_01/mechanics/ME/"
+	dir1 = './with_dispersion/P3/'+ case1[l]+"/simulation/mechanics/ME/"
 
 	
 	AHA_strain = aha_strain(directory1 = dir1, case3 = 'min', Case1 = case1[l])
