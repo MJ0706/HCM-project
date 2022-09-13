@@ -1,0 +1,4 @@
+Longitudinal strain
+Control: - 20%
+Non-obstructive : -19%
+Obstructive: -12%

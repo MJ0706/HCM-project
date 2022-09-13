@@ -98,7 +98,7 @@ def ExtractWork(IODet, SimDet, param1, param2, param3):
 	WD = np.array([-1.0*np.trapz(sff[:,i]*0.0075, eff[:,i]) for i in range(0,len(sff[1,:]))])
 	print len(WD)
 
-	uDG2.vector()[:] = WD 
+	uDG2.vector()[:] = WD*0.1323 
 	print uDG2.vector().array()
 	fdatamean << uDG2
 

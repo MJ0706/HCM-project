@@ -179,7 +179,7 @@ for l in range(len(case1)):
 
 LVbullseyemulti(data = aharraystrain, filename = "Long_strain", Stimulus = "Long_strain", DirectorY = directory, maxm = 30, minm=5)
 LVbullseyemulti(data = aharraystress, filename = "Pk2_stress", Stimulus = "Pk2_stress", DirectorY = directory, maxm =75 , minm = 25)
-LVbullseyemulti(data = aharrayworkdensity_f, filename = "Work_density_fiber", Stimulus = "Work_density", DirectorY = directory, maxm =140 , minm = 5)
+LVbullseyemulti(data = aharrayworkdensity_f, filename = "Work_density_fiber", Stimulus = "Work_density", DirectorY = directory, maxm =20.0 , minm = 0.0)
 
 
 

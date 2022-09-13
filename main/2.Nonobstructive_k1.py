@@ -82,6 +82,7 @@ Circparam = {     "Ees_la": 10.0*0.7,
 		  "Q_mv" : 0.0124479080844,
     		  "stop_iter" : 6,
 		  "V_LV_target": 82.1,
+		  }
 
 SimDetails = {    
                   "diaplacementInfo_ref": False,
