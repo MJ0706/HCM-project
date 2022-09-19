@@ -55,14 +55,24 @@ Demo python scripts are also provided to simulate
     - Control patient [1.Control.py](./main/1.Control.py)
     - Nonobstructive HCM patient [2. Nonobstructive_main.py](./main/2.Nonobstructive_main.py)
     - Obstructive HCM patient [3. Obstructive_main.py](./main/3.Obstructive_main.py)
-    - To simulate the cases with dispersion for both non-obstructive and obstructive HCM patient,  read the instructions within the codes [2. Nonobstructive_main.py](./main/2.Nonobstructive_main.py) and [3. Obstructive_main.py](./main/3.Obstructive_main.py), respectfully, with care. 
-  - Postprocessing of the code is explained at last 4 lines (that are commented) in codes such as [1. Control.py](./main/1.Control.py), [2. Nonobstructive_main.py](./main/2.Nonobstructive_main.py), [3. Obstructive_main.py](./main/3.Obstructive_main.py)
+    - The simulation cases with various degree of dispersion for non-obstructive HCM patient are: 
+        - For kappa = 0.07, [2.Nonobstructive_k1.py](./main/2.Nonobstructive_k1.py) 
+        - For kappa = 0.1, [2.Nonobstructive_k2.py](./main/2.Nonobstructive_k2.py)        
+        - For kappa = 0.14, [2.Nonobstructive_k3.py](./main/2.Nonobstructive_k3.py)
+        - For kappa = 0.18, [2.Nonobstructive_k4.py](./main/2.Nonobstructive_k4.py)
+    - The simulation cases with various degree of dispersion for Obstructive HCM patient are: 
+        - For kappa = 0.07, [2.Obstructive_k1.py](./main/2.Obstructive_k1.py) 
+        - For kappa = 0.1, [2.Obstructive_k2.py](./main/2.Obstructive_k2.py)        
+        - For kappa = 0.14, [2.Obstructive_k3.py](./main/2.Obstructive_k3.py)
+        - For kappa = 0.18, [2.Obstructive_k4.py](./main/2.Obstructive_k4.py)
+        - For kappa = 0.22, [2.Obstructive_k5.py](./main/2.Obstructive_k5.py)
+  - Postprocessing of the code is explained at last 4 lines (that are commented) in codes of [13.Postprocessing.py](./main/13.Postprocessing.py). Make sure you run each step at a time using single processor.
   - Klotz plot will be plotted using [4. KlotzPlot.py](/main/4.KlotzPlot.py). Make sure, only passive simulation results are used to plot the Klotz curve using this code. Please, check the references in the manuscript to learn more about Klotz curve. 
   - PV plot for without disarray case will be outlined using [ 5. plot_data_WithoutDisarray.py](./main/5.plot_data_WithoutDisarray.py). Make sure the input directory is correct while running this code. 
-  - PV plot for disarray case will be outlined using [6. plot_data_P2_WithDisarray.py](./main/6.plot_data_P2_WithDisarray.py) for non-obstructive patient and [8. plot_data_P3_otg_WithDisarray.py](./main/8.plot_data_P3_otg_WithDisarray.py) for obstructive patient. Make sure the input directory is correct while running this code. 
+  - PV plot for disarray case will be outlined using [6. plot_data_P2_WithDisarray.py](./main/6.plot_data_P2_WithDisarray.py) for non-obstructive patient and [8. plot_data_P3_WithDisarray.py](./main/8.plot_data_P3_WithDisarray.py) for obstructive patient. Make sure the input directory is correct while running this code. 
   - Error bar plot will be plotted by [9. plot_data_errorplot.py](./main/9.plot_data_errorplot.py)
   - AHA plot for without disarray cases can be outlined by [10. ahaplot_WithoutDisarray.py](./main/10.ahaplot_WithoutDisarray.py)
-  - AHA plot with disarray cases can be outlined by [11. ahaplot_With_disarray.py](./main/11.ahaplot_With_disarray.py)
+  - AHA plot with disarray cases can be outlined for [Non-obstructive](./main/11.ahaplot_With_disarray_nonobstructive.py) and [Obstructive](./main/11.ahaplot_With_disarray_obstructive.py) patient for various degree of disarray.
   - Deformation can be extracted using [12. extract_deformation.py](/main/12.extract_deformation.py)
   - If you face any issues running with code, email (mojumder@msu.edu) 
 
